@@ -1,5 +1,40 @@
 'use strict';
 
+//import { Contact } from './Contact.js';
+
+class Contact {
+    _Name;
+    _City;
+    _Email;
+  
+    constructor(name, city, email) {
+      this._Name = name;
+      this._City = city;
+      this._Email = email;
+    }
+  
+    set name(name) {
+      this._Name = name;
+    }
+    set city(city) {
+      this._City = city;
+    }
+    set email(email) {
+      this._Email = email;
+    }
+  
+    get name() {
+      return this._Name;
+    }
+    get city() {
+      return this._City;
+    }
+    get email() {
+      return this._Email;
+    }
+  }
+  const contact = new Contact();
+
 // Utility functions
 function onEvent(event, selector, callback) {
   return selector.addEventListener(event, callback);
@@ -9,40 +44,6 @@ function select(selector, parent = document) {
   return parent.querySelector(selector);
 }
 
-class Contact {
-  _Name;
-  _City;
-  _Email;
-
-  constructor(name, city, email) {
-    this._Name = name;
-    this._City = city;
-    this._Email = email;
-  }
-
-  set name(name) {
-    this._Name = name;
-  }
-  set city(city) {
-    this._City = city;
-  }
-  set email(email) {
-    this._Email = email;
-  }
-
-  get name() {
-    return this._Name;
-  }
-  get city() {
-    return this._City;
-  }
-  get email() {
-    return this._Email;
-  }
-}
-
-const contact = new Contact();
-
 // Main Code
 
 const input = select('.input');
@@ -51,6 +52,8 @@ const deleteBtn = select('.delete-btn')
 const output = select('.output');
 const info = select('.info');
 const counter = select('.counter');
+
+
 
 addBtn.addEventListener('click', function () {
   if (validateContact()) {
