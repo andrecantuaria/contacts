@@ -1,0 +1,156 @@
+@charset "utf-8";
+
+:root {
+  --app-blu: #09f;
+  --app-green: rgb(110, 181, 5);
+  --app-orange: #f90;
+  --app-pink: #f09;
+  --app-purple: #90f;
+  --app-dark-gray: #141414;
+  --app-medium-gray: #2d2d2d;
+  --app-white: #fff;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  outline: none;
+  border-style: none;
+  vertical-align: baseline;
+  font-family: inherit;
+  box-sizing: border-box;
+}
+
+html {
+  min-width: 100%;
+}
+
+body {
+  font-family: 'Nunito Sans', 'Open Sans', Arial, sans-serif;
+  font-weight: 400;
+  line-height: 1.5;
+  text-rendering: geometricPrecision;
+  background-color: var(--app-dark-gray);
+  overflow: auto;
+}
+
+main {
+  overflow: auto;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    width: min(100% - 30px, 1080px);
+    margin-inline: auto;
+    padding: 20px;
+  }
+
+h1 {
+  font-size: 24px;
+  font-weight: 400;
+  color: var(--app-white);
+  letter-spacing: 0.4px;
+  line-height: 2;
+}
+
+p {
+  font-size: 14px;
+  font-weight: 400;
+  color: var(--app-white);
+  letter-spacing: 0.4px;
+  line-height: 2;
+}
+
+.form-container {
+  display: flex;
+  flex-direction: row;
+  gap: 5px;
+  margin-bottom: 5px; 
+}
+
+.form {
+    display: flex;
+    align-items: center;
+  }
+
+  .input {
+    height: 30px; /* Defina a altura desejada */
+    width: 400px;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: transparent;
+    color: var(--app-white);
+    flex: 1; /* Ocupa o espaço restante na largura da div */
+  }
+
+  .add-btn {
+    height: 30px; 
+    background-color: var(--app-green); 
+    color: var(--app-white); 
+    border-radius: 5px;
+    margin-left: 5px;
+    padding-left: 20px;
+    padding-right: 20px;
+    cursor: pointer;
+  }
+
+  .output {
+    background-color: transparent;
+    width: 940px;
+    margin-top: 20px;
+    margin-left: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 10px;
+    gap: 10px;
+    text-align: left;
+  }
+.contact-container {
+    position: relative; 
+    display:inline-block;
+    width:300px;
+    background-color: var(--app-medium-gray);
+    padding: 10px;
+    border-radius: 5px;
+}
+
+  
+.delete-btn {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    width: 30px;
+    height: 30px; 
+    border-radius: 50%; 
+    background-color: var(--app-dark-gray);
+    color: var(--app-white);
+    padding: 5px; 
+    cursor: pointer;
+    display: flex;
+    align-items: center; 
+    justify-content: center; 
+    line-height: 1; 
+}
+
+.info {
+    height: 15px;
+    font-size: 12px;
+    color: rgb(212, 71, 71);
+}
+
+.counter {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    margin: 20px;
+    background-color: var(--app-blu); 
+    padding: 10px;
+    border-radius: 5px;
+    color: #fff;
+}
