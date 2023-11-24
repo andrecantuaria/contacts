@@ -3,9 +3,6 @@
 :root {
   --app-blu: #09f;
   --app-green: rgb(110, 181, 5);
-  --app-orange: #f90;
-  --app-pink: #f09;
-  --app-purple: #90f;
   --app-dark-gray: #141414;
   --app-medium-gray: #2d2d2d;
   --app-white: #fff;
@@ -77,14 +74,14 @@ p {
   }
 
   .input {
-    height: 30px; /* Defina a altura desejada */
+    height: 30px; 
     width: 400px;
     padding: 5px;
     border: 1px solid #ccc;
     border-radius: 5px;
     background-color: transparent;
     color: var(--app-white);
-    flex: 1; /* Ocupa o espaço restante na largura da div */
+    flex: 1; 
   }
 
   .add-btn {
