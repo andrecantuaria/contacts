@@ -1,34 +1,34 @@
 class Contact {
-    _Name;
-    _City;
-    _Email;
+    #Name;
+    #City;
+    #Email;
   
     constructor(name, city, email) {
-      this._Name = name;
-      this._City = city;
-      this._Email = email;
+      this.#Name = name;
+      this.#City = city;
+      this.#Email = email;
     }
   
     set name(name) {
-      this._Name = name;
+      this.#Name = name;
     }
     set city(city) {
-      this._City = city;
+      this.#City = city;
     }
     set email(email) {
-      this._Email = email;
+      this.#Email = email;
     }
   
     get name() {
-      return this._Name;
+      return this.#Name;
     }
     get city() {
-      return this._City;
+      return this.#City;
     }
     get email() {
-      return this._Email;
+      return this.#Email;
     }
   }
   const contact = new Contact();
   
-//export { Contact }; 
+export { Contact }; 

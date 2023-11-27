@@ -1,50 +1,7 @@
 'use strict';
 
-//import { Contact } from './Contact.js';
-
-class Contact {
-    _Name;
-    _City;
-    _Email;
-  
-    constructor(name, city, email) {
-      this._Name = name;
-      this._City = city;
-      this._Email = email;
-    }
-  
-    set name(name) {
-      this._Name = name;
-    }
-    set city(city) {
-      this._City = city;
-    }
-    set email(email) {
-      this._Email = email;
-    }
-  
-    get name() {
-      return this._Name;
-    }
-    get city() {
-      return this._City;
-    }
-    get email() {
-      return this._Email;
-    }
-  }
-  const contact = new Contact();
-
-// Utility functions
-function onEvent(event, selector, callback) {
-  return selector.addEventListener(event, callback);
-}
-
-function select(selector, parent = document) {
-  return parent.querySelector(selector);
-}
-
-// Main Code
+import { Contact } from './Contact.js';
+import {select, onEvent} from './utility-functions.js';
 
 const input = select('.input');
 const addBtn = select('.add-btn');
@@ -53,13 +10,11 @@ const output = select('.output');
 const info = select('.info');
 const counter = select('.counter');
 
-
-
-addBtn.addEventListener('click', function () {
-  if (validateContact()) {
-    insertContact();
-  }
-});
+onEvent('click', addBtn, function () {
+    if (validateContact()) {
+      insertContact();
+    }
+  });
 
 const contacts = [];
 let divCounter = 0;
@@ -89,7 +44,7 @@ function insertContact() {
   const deleteBtn = document.createElement('delete-btn');
   deleteBtn.textContent = 'x';
   deleteBtn.className = 'delete-btn';
-  deleteBtn.addEventListener('click', function () {
+  onEvent('click', deleteBtn, function () {
     deleteContact(contactDiv);
   });
   contactDiv.appendChild(deleteBtn);
